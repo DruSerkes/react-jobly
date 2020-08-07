@@ -1,6 +1,7 @@
 import React from 'react';
 import { Route, Switch, Redirect } from 'react-router-dom';
 import Company from './Company';
+import Companies from './Companies';
 
 const Routes = () => {
 	return (
@@ -13,8 +14,7 @@ const Routes = () => {
 				<Company />
 			</Route>
 			<Route exact path="/companies">
-				{/* <Companies /> */}
-				<h1>This is the Companies page</h1>
+				<Companies />
 			</Route>
 			<Route exact path="/login">
 				{/* <Login /> */}

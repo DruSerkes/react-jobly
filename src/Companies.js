@@ -8,8 +8,8 @@ const Companies = () => {
 
 	useEffect(() => {
 		const getCompanies = async () => {
-			let companies = await JoblyApi.getCompanies();
-			setCompanies({ ...companies });
+			let companies = await JoblyApi.getAllCompanies();
+			setCompanies([ ...companies ]);
 		};
 		getCompanies();
 	}, []);
@@ -20,7 +20,7 @@ const Companies = () => {
 
 	return (
 		<div className="Companies">
-			{companies.map((company) => <h1>{company.name}</h1>)}
+			{companies.map((company) => <p>{company.name}</p>)}
 			{/* {companies.map(company => <CompanyCard company={company} /> */}
 		</div>
 	);
