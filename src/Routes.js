@@ -14,7 +14,7 @@ const Routes = () => {
 			</Route>
 			<Route exact path="/companies">
 				{/* <Companies /> */}
-				<h1>This is the Company page</h1>
+				<h1>This is the Companies page</h1>
 			</Route>
 			<Route exact path="/login">
 				{/* <Login /> */}
