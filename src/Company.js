@@ -1,11 +1,24 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import JoblyApi from './JoblyApi';
 import { useParams } from 'react-router-dom';
-
+// anderson-arias-and-morrow
 const Company = () => {
+	const [ company, setCompany ] = useState(null);
 	const handle = useParams;
-	const company = JoblyApi.getCompany(handle);
+
+	useEffect(() => {
+		// const getCompany = () => {
+		let company = JoblyApi.getCompany(handle);
+		setCompany({ ...company });
+		// };
+	}, []);
+
 	console.log(company);
+
+	if (!company) {
+		return <h2>Loading company data</h2>;
+	}
+
 	return (
 		<div className="Company">
 			<h2>{company.name}</h2>
