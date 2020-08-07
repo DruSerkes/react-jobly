@@ -1,0 +1,33 @@
+.Navbar {
+	width: 100vw;
+	display: flex;
+	position: sticky;
+	justify-content: left;
+	align-items: center;
+	background-color: white;
+	font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+	font-size: 1.2rem;
+	box-shadow: 0 1px 4px gray;
+}
+.Navbar-Brand {
+	margin: 0 1rem;
+}
+
+.Navbar-Nav {
+	margin: 0;
+	width: 100%;
+	display: flex;
+	flex-direction: row;
+	justify-content: flex-end;
+	align-items: center;
+}
+
+.Navbar-Nav li {
+	margin: 1rem;
+	list-style-type: none;
+}
+
+a {
+	text-decoration: none;
+	color: blue;
+}
