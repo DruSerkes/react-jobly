@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import JoblyApi from './JoblyApi';
 import { useParams } from 'react-router-dom';
+import Jobcard from './JobCard';
+import './Company.css';
 
 const Company = () => {
 	const [ company, setCompany ] = useState(null);
@@ -22,9 +24,8 @@ const Company = () => {
 		<div className="Company">
 			<h2>{company.name}</h2>
 			<p>{company.description}</p>
-			<h4>Render jobcard components</h4>
-			{company.jobs.map((job) => <p>Jobcard for job: {job.title}</p>)}
-			{/* {company.jobs.map((job) => <Jobcard key={job.handle} job={job}/>)} */}
+			{/* {company.jobs.map((job) => <p>Jobcard for job: {job.title}</p>)} */}
+			{company.jobs.map((job) => <Jobcard key={job.handle} job={job} />)}
 		</div>
 	);
 };

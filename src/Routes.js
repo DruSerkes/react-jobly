@@ -11,7 +11,6 @@ const Routes = () => {
 			</Route>
 			<Route exact path="/companies/:handle">
 				<Company />
-				{/* <h1>This is the Company page</h1> */}
 			</Route>
 			<Route exact path="/companies">
 				{/* <Companies /> */}
