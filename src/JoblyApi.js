@@ -30,3 +30,5 @@ class JoblyApi {
 		return res.company;
 	}
 }
+
+export default JoblyApi;
