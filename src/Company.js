@@ -1,19 +1,18 @@
 import React, { useState, useEffect } from 'react';
 import JoblyApi from './JoblyApi';
 import { useParams } from 'react-router-dom';
-// anderson-arias-and-morrow
+
 const Company = () => {
 	const [ company, setCompany ] = useState(null);
-	const handle = useParams;
+	const { handle } = useParams();
 
 	useEffect(() => {
-		// const getCompany = () => {
-		let company = JoblyApi.getCompany(handle);
-		setCompany({ ...company });
-		// };
+		const getCompany = async () => {
+			let company = await JoblyApi.getCompany(handle);
+			setCompany({ ...company });
+		};
+		getCompany();
 	}, []);
-
-	console.log(company);
 
 	if (!company) {
 		return <h2>Loading company data</h2>;
@@ -25,7 +24,7 @@ const Company = () => {
 			<p>{company.description}</p>
 			<h4>Render jobcard components</h4>
 			{company.jobs.map((job) => <p>Jobcard for job: {job.title}</p>)}
-			{/* {company.jobs.map((job) => <Jobcard job={job}/>)} */}
+			{/* {company.jobs.map((job) => <Jobcard key={job.handle} job={job}/>)} */}
 		</div>
 	);
 };
