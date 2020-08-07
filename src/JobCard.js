@@ -1,15 +1,20 @@
 import React from 'react';
+import './JobCard.css';
 
 const JobCard = ({ job, handleApply }) => {
 	return (
 		<div className="JobCard">
-			<h3>{job.title}</h3>
-			<ul>
-				<li>{job.salary}</li>
-				<li>{job.equity}</li>
-			</ul>
-			{/* add onclick={handleApply} */}
+			<div className="JobCard-Info">
+				<h3>{job.title}</h3>
+				<ul>
+					<li>Salary: {job.salary}</li>
+					<li>Equity: {job.equity}</li>
+				</ul>
+			</div>
+
 			<button className="JobCard-Apply">Apply</button>
+
+			{/* add onclick={handleApply} */}
 		</div>
 	);
 };
