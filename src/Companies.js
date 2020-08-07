@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import JoblyApi from './JoblyApi';
-// import Companycard from './CompanyCard';
+import CompanyCard from './CompanyCard';
 // import './Companies.css';
 
 const Companies = () => {
@@ -20,8 +20,8 @@ const Companies = () => {
 
 	return (
 		<div className="Companies">
-			{companies.map((company) => <p>{company.name}</p>)}
-			{/* {companies.map(company => <CompanyCard company={company} /> */}
+			{/* {companies.map((company) => <p>{company.name}</p>)} */}
+			{companies.map((company) => <CompanyCard company={company} key={company.handle} />)}
 		</div>
 	);
 };

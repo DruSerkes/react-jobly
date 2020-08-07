@@ -1,0 +1,9 @@
+.CompanyCard {
+	margin: 1rem auto;
+	background-color: white;
+	width: 50%;
+	box-shadow: 1px 2px 3px lightgray;
+	padding: 1rem;
+	border-radius: 1px;
+	position: relative;
+}
