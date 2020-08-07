@@ -1,0 +1,11 @@
+.Company {
+	margin-top: 3rem auto 0 auto;
+	padding: 1rem 1rem;
+}
+
+.Company h2,
+p {
+	width: 50%;
+	margin: 0 auto;
+	text-align: center;
+}
