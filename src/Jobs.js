@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import JoblyApi from './JoblyApi';
 import JobCard from './JobCard';
-// import './Jobs.css';
+import './Jobs.css';
 
 const Jobs = () => {
 	const [ jobs, setJobs ] = useState(null);
