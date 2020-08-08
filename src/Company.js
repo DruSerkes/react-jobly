@@ -8,13 +8,16 @@ const Company = () => {
 	const [ company, setCompany ] = useState(null);
 	const { handle } = useParams();
 
-	useEffect(() => {
-		const getCompany = async () => {
-			let company = await JoblyApi.getCompany(handle);
-			setCompany({ ...company });
-		};
-		getCompany();
-	}, []);
+	useEffect(
+		() => {
+			const getCompany = async () => {
+				let company = await JoblyApi.getCompany(handle);
+				setCompany({ ...company });
+			};
+			getCompany();
+		},
+		[ handle ]
+	);
 
 	if (!company) {
 		return <h2>Loading company data</h2>;

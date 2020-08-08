@@ -1,0 +1,9 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Company tests Shows a company 1`] = `
+<DocumentFragment>
+  <h2>
+    Loading company data
+  </h2>
+</DocumentFragment>
+`;

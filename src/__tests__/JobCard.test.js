@@ -1,7 +1,3 @@
-/* TODO pick back up here with
-		- tests for 85% of these routes so far 
-		- then create Companies.css
-*/
 import React from 'react';
 import { render } from '@testing-library/react';
 import JobCard from '../JobCard';
