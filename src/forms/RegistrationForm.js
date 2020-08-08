@@ -14,12 +14,10 @@ const RegistrationForm = ({ doLogin }) => {
 	};
 
 	const handleRegister = async (values, { setSubmitting }) => {
-		console.log(values);
 		const token = await JoblyApi.register(values);
 		localStorage.setItem('jobly-token', token);
 		setSubmitting(false);
-		doLogin();
-		// there will be one more thing here to keep currentUser in state
+		doLogin(values);
 	};
 
 	return (

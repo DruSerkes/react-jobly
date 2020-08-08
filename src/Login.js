@@ -1,15 +1,16 @@
-import React, { useState } from 'react';
+import React, { useState, useContext } from 'react';
 import { useHistory } from 'react-router-dom';
 import LoginForm from './forms/LoginForm';
 import RegistrationForm from './forms/RegistrationForm';
-
-// write a function to pass down to the forms for their handleSubmits to login/register a user
+import userContext from './Context';
 
 const Login = () => {
 	const [ formView, setFormView ] = useState('login');
+	const { setCurrentUser } = useContext(userContext);
 	const history = useHistory();
 
-	const doLogin = () => {
+	const doLogin = (values) => {
+		setCurrentUser({ ...values });
 		history.push('/');
 	};
 

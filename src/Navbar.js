@@ -1,24 +1,29 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useContext } from 'react';
 import { NavLink, useHistory } from 'react-router-dom';
 import './Navbar.css';
+import userContext from './Context';
 
 const Navbar = () => {
 	const [ isLoggedIn, setisLoggedIn ] = useState(false);
+	const { currentUser, setCurrentUser } = useContext(userContext);
 	const history = useHistory();
+
 	const doLogout = () => {
 		localStorage.removeItem('jobly-token');
+		setCurrentUser(null);
 		setisLoggedIn(false);
 		history.push('/');
 	};
 
-	// changing isLoggedIn to the currentUser context might change this function
 	useEffect(
 		() => {
 			if (localStorage.getItem('jobly-token')) {
-				setisLoggedIn(true);
+				setisLoggedIn(() => true);
+			} else {
+				setisLoggedIn(false);
 			}
 		},
-		[ localStorage ]
+		[ currentUser ]
 	);
 
 	return (
@@ -43,7 +48,6 @@ const Navbar = () => {
 					</li>
 				) : null}
 				<li>
-					{/* Refactor logic eventually to check for user login and render NavLink to="/logout" here instead */}
 					{isLoggedIn ? (
 						<NavLink to="/" onClick={doLogout}>
 							Logout

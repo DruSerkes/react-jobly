@@ -14,8 +14,7 @@ const LoginForm = ({ doLogin }) => {
 		const token = await JoblyApi.login(values);
 		localStorage.setItem('jobly-token', token);
 		setSubmitting(false);
-		doLogin();
-		// there will be one more thing here to keep currentUser in state
+		doLogin(values);
 	};
 
 	return (
