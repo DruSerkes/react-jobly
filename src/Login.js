@@ -8,16 +8,13 @@ import RegistrationForm from './forms/RegistrationForm';
 
 const Login = () => {
 	const [ formView, setFormView ] = useState('login');
-	const changeFormView = () => {
-		formView === 'login' ? setFormView('register') : setFormView('login');
-	};
 
 	return (
 		<div className="Login">
 			<div className="Login-Container">
 				<div className="Login-Buttons">
-					<button onClick={changeFormView}>Login</button>
-					<button onClick={changeFormView}>Register</button>
+					<button onClick={() => setFormView('login')}>Login</button>
+					<button onClick={() => setFormView('register')}>Register</button>
 				</div>
 				{formView === 'login' ? <LoginForm /> : <RegistrationForm />}
 			</div>
