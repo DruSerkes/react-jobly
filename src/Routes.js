@@ -3,6 +3,7 @@ import { Route, Switch, Redirect } from 'react-router-dom';
 import Company from './Company';
 import Companies from './Companies';
 import Jobs from './Jobs';
+import Login from './Login';
 
 const Routes = () => {
 	return (
@@ -17,8 +18,8 @@ const Routes = () => {
 				<Companies />
 			</Route>
 			<Route exact path="/login">
-				{/* <Login /> */}
-				<h1>This is the Login page</h1>
+				<Login />
+				{/* <h1>This is the Login page</h1> */}
 			</Route>
 			<Route exact path="/profile">
 				{/* <Profile /> */}
