@@ -1,8 +1,3 @@
-/* TODO pick back up here with
-		- tests for Company and Companies
-        - then create Companies.css
-        - then step 5
-*/
 import React from 'react';
 import { render } from '@testing-library/react';
 import Company from '../Company';
