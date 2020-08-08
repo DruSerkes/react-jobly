@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import JoblyApi from './JoblyApi';
 import CompanyCard from './CompanyCard';
+import { Link } from 'react-router-dom';
 // import './Companies.css';
 // TODO ^^
 
@@ -21,8 +22,15 @@ const Companies = () => {
 
 	return (
 		<div className="Companies">
-			{/* {companies.map((company) => <p>{company.name}</p>)} */}
-			{companies.map((company) => <CompanyCard company={company} key={company.handle} />)}
+			<ul>
+				{companies.map((company) => (
+					<li key={company.handle}>
+						<Link to={`/companies/${company.handle}`}>
+							<CompanyCard company={company} />{' '}
+						</Link>
+					</li>
+				))}
+			</ul>
 		</div>
 	);
 };
