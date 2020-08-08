@@ -25,3 +25,17 @@
 	position: relative;
 	right: 0px;
 }
+
+.JobCard button {
+	background-color: #dc3545;
+	border: none;
+	margin: 1rem;
+	padding: 0.5rem .85rem;
+	outline: none;
+	border-radius: 5px;
+	font-weight: 700;
+	text-transform: uppercase;
+	color: white;
+	font-size: 1rem;
+	line-height: 1.5rem;
+}
