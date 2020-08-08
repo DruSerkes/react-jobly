@@ -2,6 +2,7 @@ import React from 'react';
 import { Formik, Form } from 'formik';
 import TextInput from './TextInput';
 import loginSchema from './LoginFormSchema';
+import JoblyApi from '../JoblyApi';
 
 const LoginForm = () => {
 	const INITIAL_VALUES = {
@@ -9,8 +10,11 @@ const LoginForm = () => {
 		password : ''
 	};
 
-	const handleLogin = (values, { setSubmitting }) => {
+	const handleLogin = async (values, { setSubmitting }) => {
 		console.log(values);
+		const token = await JoblyApi.login(values);
+		localStorage.setItem('jobly-token', token);
+		// there will be one more thing here to keep currentUser in state
 		setSubmitting(false);
 	};
 
