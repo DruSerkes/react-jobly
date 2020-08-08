@@ -11,6 +11,7 @@ const Navbar = () => {
 		history.push('/');
 	};
 
+	// changing isLoggedIn to the currentUser context might change this function
 	useEffect(
 		() => {
 			if (localStorage.getItem('jobly-token')) {
