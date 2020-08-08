@@ -4,7 +4,7 @@ import TextInput from './TextInput';
 import registrationSchema from './registrationSchema';
 import JoblyApi from '../JoblyApi';
 
-const RegistrationForm = () => {
+const RegistrationForm = ({ doLogin }) => {
 	const INITIAL_VALUES = {
 		username   : '',
 		password   : '',
@@ -17,8 +17,9 @@ const RegistrationForm = () => {
 		console.log(values);
 		const token = await JoblyApi.register(values);
 		localStorage.setItem('jobly-token', token);
-		// there will be one more thing here to keep currentUser in state
 		setSubmitting(false);
+		doLogin();
+		// there will be one more thing here to keep currentUser in state
 	};
 
 	return (
