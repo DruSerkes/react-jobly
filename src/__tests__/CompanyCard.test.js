@@ -1,6 +1,5 @@
 import React from 'react';
-import { render, cleanup } from '@testing-library/react';
-import { MemoryRouter, Route } from 'react-router-dom';
+import { render } from '@testing-library/react';
 import CompanyCard from '../CompanyCard';
 
 describe('CompanyCard tests', () => {
