@@ -27,7 +27,13 @@ const Company = () => {
 		<div className="Company">
 			<h3>{company.name}</h3>
 			<p>{company.description}</p>
-			{company.jobs.map((job) => <Jobcard key={job.handle} job={job} />)}
+			<ul>
+				{company.jobs.map((job) => (
+					<li key={job.handle}>
+						<Jobcard job={job} />
+					</li>
+				))}
+			</ul>
 		</div>
 	);
 };

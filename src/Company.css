@@ -9,3 +9,7 @@ p {
 	margin: 0 auto;
 	text-align: center;
 }
+
+.Company li {
+	list-style-type: none;
+}
