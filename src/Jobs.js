@@ -22,7 +22,7 @@ const Jobs = () => {
 		<div className="Jobs">
 			<ul>
 				{jobs.map((job) => (
-					<li key={job.handle}>
+					<li key={job.id}>
 						<JobCard job={job} />
 					</li>
 				))}
