@@ -3,10 +3,15 @@ import { Formik, Form } from 'formik';
 import TextInput from './TextInput';
 import loginSchema from './LoginFormSchema';
 
-const LoginForm = ({ handleLogin }) => {
+const LoginForm = () => {
 	const INITIAL_VALUES = {
 		username : '',
 		password : ''
+	};
+
+	const handleLogin = (values, { setSubmitting }) => {
+		console.log(values);
+		setSubmitting(false);
 	};
 
 	return (

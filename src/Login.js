@@ -12,14 +12,6 @@ const Login = () => {
 		formView === 'login' ? setFormView('register') : setFormView('login');
 	};
 
-	const handleLogin = ({ values }) => {
-		console.log(values);
-	};
-
-	const handleRegister = ({ values }) => {
-		console.log(values);
-	};
-
 	return (
 		<div className="Login">
 			<div className="Login-Container">
@@ -27,11 +19,7 @@ const Login = () => {
 					<button onClick={changeFormView}>Login</button>
 					<button onClick={changeFormView}>Register</button>
 				</div>
-				{formView === 'login' ? (
-					<LoginForm handleLogin={handleLogin} />
-				) : (
-					<RegistrationForm handleRegister={handleRegister} />
-				)}
+				{formView === 'login' ? <LoginForm /> : <RegistrationForm />}
 			</div>
 		</div>
 	);

@@ -3,13 +3,18 @@ import { Formik, Form } from 'formik';
 import TextInput from './TextInput';
 import registrationSchema from './registrationSchema';
 
-const RegistrationForm = ({ handleRegister }) => {
+const RegistrationForm = () => {
 	const INITIAL_VALUES = {
 		username   : '',
 		password   : '',
 		first_name : '',
 		last_name  : '',
 		email      : ''
+	};
+
+	const handleRegister = (values, { setSubmitting }) => {
+		console.log(values);
+		setSubmitting(false);
 	};
 
 	return (
