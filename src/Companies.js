@@ -2,8 +2,7 @@ import React, { useState, useEffect } from 'react';
 import JoblyApi from './JoblyApi';
 import CompanyCard from './CompanyCard';
 import { Link } from 'react-router-dom';
-// import './Companies.css';
-// TODO ^^
+import './Companies.css';
 
 const Companies = () => {
 	const [ companies, setCompanies ] = useState(null);
