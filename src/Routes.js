@@ -4,6 +4,7 @@ import Company from './Company';
 import Companies from './Companies';
 import Jobs from './Jobs';
 import Login from './Login';
+import Home from './Home';
 
 const Routes = () => {
 	return (
@@ -19,15 +20,14 @@ const Routes = () => {
 			</Route>
 			<Route exact path="/login">
 				<Login />
-				{/* <h1>This is the Login page</h1> */}
 			</Route>
 			<Route exact path="/profile">
 				{/* <Profile /> */}
 				<h1>This is the Profile page</h1>
 			</Route>
 			<Route exact path="/">
-				{/* <Home /> */}
-				<h1>This is the Home page</h1>
+				<Home />
+				{/* <h1>This is the Home page</h1> */}
 			</Route>
 			<Redirect path="/" to="/" />
 		</Switch>

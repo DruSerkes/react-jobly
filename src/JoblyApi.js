@@ -42,17 +42,13 @@ class JoblyApi {
 		return res.jobs;
 	}
 
-	// This is going to need some debugging probably
 	static async login(data) {
 		let res = await this.request('login', data, 'post');
-		console.log('res inside the API function: ', res);
 		return res.token;
 	}
 
-	// So is this likely
 	static async register(data) {
 		let res = await this.request('users', data, 'post');
-		console.log('res inside the API register function: ', res);
 		return res.token;
 	}
 }
