@@ -2,13 +2,13 @@ import React from 'react';
 import { Route, Switch, Redirect } from 'react-router-dom';
 import Company from './Company';
 import Companies from './Companies';
+import Jobs from './Jobs';
 
 const Routes = () => {
 	return (
 		<Switch>
 			<Route exact path="/jobs">
-				{/* <Jobs /> */}
-				<h1>This is the Jobs page</h1>
+				<Jobs />
 			</Route>
 			<Route exact path="/companies/:handle">
 				<Company />
