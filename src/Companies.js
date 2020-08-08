@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import JoblyApi from './JoblyApi';
 import CompanyCard from './CompanyCard';
 // import './Companies.css';
+// TODO ^^
 
 const Companies = () => {
 	const [ companies, setCompanies ] = useState(null);

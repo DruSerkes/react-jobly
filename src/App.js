@@ -11,8 +11,6 @@ function App() {
 				<Navbar />
 				<Routes />
 			</BrowserRouter>
-			{/* Wrap Browser Router around app in index */}
-			{/* Render Routes Component here  */}
 		</div>
 	);
 }

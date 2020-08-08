@@ -7,3 +7,23 @@
 	border-radius: 1px;
 	position: relative;
 }
+
+.CompanyCard h3 {
+	display: flex;
+	justify-content: space-between;
+}
+
+.CompanyCard span {
+	text-align: left;
+}
+
+.CompanyCard p {
+	text-align: left;
+	width: 100%;
+	margin: 1rem;
+	margin: 10px 0;
+}
+
+.CompanyCard img {
+	font-weight: 200;
+}
