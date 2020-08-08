@@ -1,0 +1,33 @@
+import { render, cleanup } from '@testing-library/react';
+import { MemoryRouter, Route } from 'react-router-dom';
+import CompanyCard from '../CompanyCard';
+
+/* TODO pick back up here with
+		- tests for 85% of these routes so far 
+		- then create Companies.css
+*/
+
+describe('CompanyCard tests', () => {
+	const mockCompany = {
+		name        : 'mock',
+		description : 'this is a mock company',
+		logo_url    : 'https://www.test.com/img.png'
+	};
+
+	it('renders without breaking', () => {
+		render(<CompanyCard company={mockCompany} />);
+	});
+
+	it('matches snapshot', () => {
+		const { asFragment } = render(<CompanyCard company={mockCompany} />);
+		expect(asFragment()).toMatchSnapshot();
+	});
+
+	it('contains name and description', () => {
+		const { getByText } = render(<CompanyCard company={mockCompany} />);
+		const name = getByText(mockCompany.name);
+		const description = getByText(mockCompany.description);
+		expect(name).toBeInTheDocument();
+		expect(description).toBeInTheDocument();
+	});
+});
