@@ -1,11 +1,7 @@
+import React from 'react';
 import { render, cleanup } from '@testing-library/react';
 import { MemoryRouter, Route } from 'react-router-dom';
 import CompanyCard from '../CompanyCard';
-
-/* TODO pick back up here with
-		- tests for 85% of these routes so far 
-		- then create Companies.css
-*/
 
 describe('CompanyCard tests', () => {
 	const mockCompany = {
