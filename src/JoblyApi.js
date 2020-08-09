@@ -55,7 +55,7 @@ class JoblyApi {
 
 	static async getUser(token) {
 		let decoded = jwt.decode(token);
-		let res = await this.request(`users/${decoded.payload.username}`, token, 'get');
+		let res = await this.request(`users/${decoded.username}`);
 		return res.user;
 	}
 }

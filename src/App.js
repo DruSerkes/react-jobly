@@ -10,8 +10,14 @@ function App() {
 	const [ currentUser, setCurrentUser ] = useState(null);
 
 	useEffect(() => {
-		if (localStorage.getItem('jobly-token')) {
-		}
+		const checkCurrentUser = async () => {
+			if (localStorage.getItem('jobly-token')) {
+				const token = localStorage.getItem('jobly-token');
+				const { username, first_name, last_name, email, photo_url } = await JoblyApi.getUser(token);
+				setCurrentUser({ username, first_name, last_name, email, photo_url });
+			}
+		};
+		checkCurrentUser();
 	}, []);
 
 	return (
