@@ -1,4 +1,5 @@
 import axios from 'axios';
+const jwt = require('jsonwebtoken');
 
 class JoblyApi {
 	static async request(endpoint, paramsOrData = {}, verb = 'get') {
@@ -50,6 +51,12 @@ class JoblyApi {
 	static async register(data) {
 		let res = await this.request('users', data, 'post');
 		return res.token;
+	}
+
+	static async getUser(token) {
+		let decoded = jwt.decode(token);
+		let res = await this.request(`users/${decoded.payload.username}`, token, 'get');
+		return res.user;
 	}
 }
 
