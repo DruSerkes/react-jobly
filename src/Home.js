@@ -3,11 +3,9 @@ import { Link } from 'react-router-dom';
 import userContext from './Context';
 
 // TODO
-// 1. Add tests for Home, Login components
-// 2. Add styles for Home, Login components
-// 3. Step 7 - useEffect to check for token in localStorage - if it's there - ping the API for user and store in currentUser state
-// 3.5 - this should fix the Home component, and you should then be able to refactor the Navbar as well
-// 4. Check currentUser (useContext) to protect routes to companies/jobs/company/profile
+// 1. Add tests for Home, Login, Profile components
+// 2. Add styles for Home, Login, Profile components
+// 3. Step 9 - add apply 
 
 const Home = () => {
 	const { currentUser } = useContext(userContext);

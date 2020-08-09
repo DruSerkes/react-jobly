@@ -5,29 +5,28 @@ import Companies from './Companies';
 import Jobs from './Jobs';
 import Login from './Login';
 import Home from './Home';
+import Profile from './Profile';
 
-const Routes = () => {
+const Routes = ({ currentUser }) => {
 	return (
 		<Switch>
 			<Route exact path="/jobs">
-				<Jobs />
+				{currentUser ? <Jobs /> : <Redirect to="/" />}
 			</Route>
 			<Route exact path="/companies/:handle">
-				<Company />
+				{currentUser ? <Company /> : <Redirect to="/" />}
 			</Route>
 			<Route exact path="/companies">
-				<Companies />
+				{currentUser ? <Companies /> : <Redirect to="/" />}
 			</Route>
 			<Route exact path="/login">
 				<Login />
 			</Route>
 			<Route exact path="/profile">
-				{/* <Profile /> */}
-				<h1>This is the Profile page</h1>
+				{currentUser ? <Profile /> : <Redirect to="/" />}
 			</Route>
 			<Route exact path="/">
 				<Home />
-				{/* <h1>This is the Home page</h1> */}
 			</Route>
 			<Redirect path="/" to="/" />
 		</Switch>

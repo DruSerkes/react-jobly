@@ -24,8 +24,8 @@ function App() {
 		<div className="App">
 			<BrowserRouter>
 				<userContext.Provider value={{ currentUser, setCurrentUser }}>
-					<Navbar />
-					<Routes />
+					<Navbar currentUser={currentUser} setCurrentUser={setCurrentUser} />
+					<Routes currentUser={currentUser} setCurrentUser={setCurrentUser} />
 				</userContext.Provider>
 			</BrowserRouter>
 		</div>

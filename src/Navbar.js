@@ -1,11 +1,9 @@
-import React, { useState, useEffect, useContext } from 'react';
+import React, { useState, useEffect } from 'react';
 import { NavLink, useHistory } from 'react-router-dom';
 import './Navbar.css';
-import userContext from './Context';
 
-const Navbar = () => {
+const Navbar = ({ currentUser, setCurrentUser }) => {
 	const [ isLoggedIn, setisLoggedIn ] = useState(false);
-	const { currentUser, setCurrentUser } = useContext(userContext);
 	const history = useHistory();
 
 	const doLogout = () => {
