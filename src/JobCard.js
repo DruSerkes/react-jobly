@@ -6,9 +6,12 @@ import JoblyApi from './JoblyApi';
 const JobCard = ({ job }) => {
 	const { currentUser, setCurrentUser } = useContext(userContext);
 	const handleApply = async () => {
-		const [ message, updatedUser ] = await JoblyApi.apply(job, currentUser);
-		if (message === 'applied') setCurrentUser(updatedUser);
-		console.log('message === ', message);
+		try {
+			const [ message, updatedUser ] = await JoblyApi.apply(job, currentUser);
+			if (message === 'applied') setCurrentUser(updatedUser);
+		} catch (e) {
+			console.log(e);
+		}
 	};
 
 	currentUser.jobs.forEach((j) => {

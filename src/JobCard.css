@@ -26,6 +26,11 @@
 	right: 0px;
 }
 
+.JobCard .disabled {
+	background-color: #e68d96;
+	cursor: default;
+}
+
 .JobCard button {
 	background-color: #dc3545;
 	border: none;
