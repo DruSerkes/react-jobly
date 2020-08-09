@@ -29,15 +29,19 @@ const Companies = () => {
 	return (
 		<div className="Companies">
 			<Search handleSearch={handleSearch} />
-			<ul>
-				{companies.map((company) => (
-					<li key={company.handle}>
-						<Link to={`/companies/${company.handle}`}>
-							<CompanyCard company={company} />{' '}
-						</Link>
-					</li>
-				))}
-			</ul>
+			{!companies.length ? (
+				<p className="Companies-Sorry">Sorry! No companies match your search</p>
+			) : (
+				<ul>
+					{companies.map((company) => (
+						<li key={company.handle}>
+							<Link to={`/companies/${company.handle}`}>
+								<CompanyCard company={company} />{' '}
+							</Link>
+						</li>
+					))}
+				</ul>
+			)}
 		</div>
 	);
 };

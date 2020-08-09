@@ -5,3 +5,9 @@
 .Companies li {
 	list-style-type: none;
 }
+
+.Companies-Sorry {
+	margin: 5rem auto;
+	font-size: 1.6rem;
+	font-weight: 300;
+}
