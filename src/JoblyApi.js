@@ -29,41 +29,76 @@ class JoblyApi {
 	}
 
 	static async getCompany(handle) {
-		let res = await this.request(`companies/${handle}`);
-		return res.company;
+		try {
+			let res = await this.request(`companies/${handle}`);
+			return res.company;
+		} catch (e) {
+			console.log(e);
+			return e;
+		}
 	}
 
 	static async getAllCompanies() {
-		let res = await this.request(`companies`);
-		return res.companies;
+		try {
+			let res = await this.request(`companies`);
+			return res.companies;
+		} catch (e) {
+			console.log(e);
+			return e;
+		}
 	}
 
 	static async getAllJobs() {
-		let res = await this.request('jobs');
-		return res.jobs;
+		try {
+			let res = await this.request('jobs');
+			return res.jobs;
+		} catch (e) {
+			console.log(e);
+			return e;
+		}
 	}
 
 	static async login(data) {
-		let res = await this.request('login', data, 'post');
-		return res.token;
+		try {
+			let res = await this.request('login', data, 'post');
+			return res.token;
+		} catch (e) {
+			console.log(e);
+			return e;
+		}
 	}
 
 	static async register(data) {
-		let res = await this.request('users', data, 'post');
-		return res.token;
+		try {
+			let res = await this.request('users', data, 'post');
+			return res.token;
+		} catch (e) {
+			console.log(e);
+			return e;
+		}
 	}
 
 	static async getUser(token) {
-		let decoded = jwt.decode(token);
-		let res = await this.request(`users/${decoded.username}`);
-		return res.user;
+		try {
+			let decoded = jwt.decode(token);
+			let res = await this.request(`users/${decoded.username}`);
+			return res.user;
+		} catch (e) {
+			console.log(e);
+			return e;
+		}
 	}
 
 	static async updateUser(data) {
-		const { username } = data;
-		delete data.username;
-		let res = await this.request(`users/${username}`, data, 'patch');
-		return res.user;
+		try {
+			const { username } = data;
+			delete data.username;
+			let res = await this.request(`users/${username}`, data, 'patch');
+			return res.user;
+		} catch (e) {
+			console.log(e);
+			return e;
+		}
 	}
 
 	static async apply(job, currentUser) {
@@ -73,6 +108,7 @@ class JoblyApi {
 			let updatedUser = await this.request(`users/${username}`);
 			return [ res.message, updatedUser.user ];
 		} catch (e) {
+			console.log(e);
 			return e;
 		}
 	}
