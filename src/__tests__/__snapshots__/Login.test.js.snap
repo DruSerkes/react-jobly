@@ -1,0 +1,61 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Login tests matches snapshot 1`] = `
+<DocumentFragment>
+  <div
+    class="Login"
+  >
+    <div
+      class="Login-Container"
+    >
+      <div
+        class="Login-Buttons"
+      >
+        <button
+          class="login active"
+        >
+          Login
+        </button>
+        <button
+          class="register"
+        >
+          Register
+        </button>
+      </div>
+      <div
+        class="LoginForm"
+      >
+        <form
+          action="#"
+        >
+          <label
+            for="username"
+          >
+            Username
+          </label>
+          <input
+            class="text-input"
+            name="username"
+            type="text"
+            value=""
+          />
+          <label
+            for="password"
+          >
+            Password
+          </label>
+          <input
+            class="text-input"
+            name="password"
+            type="password"
+            value=""
+          />
+          <button>
+            Submit
+          </button>
+        </form>
+      </div>
+    </div>
+  </div>
+</DocumentFragment>
+`;

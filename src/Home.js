@@ -4,8 +4,7 @@ import userContext from './Context';
 import './Home.css';
 
 // TODO
-// 1. Add styles for Profile components
-// 2. Add tests for Home, Login, Profile components
+// 2. Add tests for Login, Profile components
 // 3. Step 9 - add apply
 
 const Home = () => {

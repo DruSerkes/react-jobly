@@ -1,0 +1,83 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Profile tests matches snapshot 1`] = `
+<DocumentFragment>
+  <div
+    class="Profile"
+  >
+    <h2>
+      Profile
+    </h2>
+    <form
+      action="#"
+    >
+      <h4>
+        Username
+      </h4>
+      <p>
+        test
+      </p>
+      <label
+        for="first_name"
+      >
+        First name
+      </label>
+      <input
+        class="text-input"
+        name="first_name"
+        type="text"
+        value="test"
+      />
+      <label
+        for="last_name"
+      >
+        Last name
+      </label>
+      <input
+        class="text-input"
+        name="last_name"
+        type="text"
+        value="test"
+      />
+      <label
+        for="email"
+      >
+        Email
+      </label>
+      <input
+        class="text-input"
+        name="email"
+        type="email"
+        value="test"
+      />
+      <label
+        for="photo_url"
+      >
+        Photo URL
+      </label>
+      <input
+        class="text-input"
+        name="photo_url"
+        type="url"
+        value=""
+      />
+      <label
+        for="password"
+      >
+        Re-enter Password
+      </label>
+      <input
+        class="text-input"
+        name="password"
+        type="password"
+        value=""
+      />
+      <button
+        type="submit"
+      >
+        Save Changes
+      </button>
+    </form>
+  </div>
+</DocumentFragment>
+`;
