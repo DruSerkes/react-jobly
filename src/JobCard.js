@@ -1,7 +1,22 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import './JobCard.css';
+import userContext from './Context';
+import JoblyApi from './JoblyApi';
 
-const JobCard = ({ job, handleApply }) => {
+const JobCard = ({ job }) => {
+	const { currentUser, setCurrentUser } = useContext(userContext);
+	const handleApply = async () => {
+		const [ message, updatedUser ] = await JoblyApi.apply(job, currentUser);
+		if (message === 'applied') setCurrentUser(updatedUser);
+		console.log('message === ', message);
+	};
+
+	currentUser.jobs.forEach((j) => {
+		if (j.id === job.id) {
+			job.applied = true;
+		}
+	});
+
 	return (
 		<div className="JobCard">
 			<div className="JobCard-Info">
@@ -11,10 +26,15 @@ const JobCard = ({ job, handleApply }) => {
 					<li>Equity: {job.equity}</li>
 				</ul>
 			</div>
-
-			<button className="JobCard-Apply">Apply</button>
-
-			{/* add onclick={handleApply} */}
+			{job.applied ? (
+				<button className="JobCard-Apply disabled" onClick={() => null}>
+					Applied
+				</button>
+			) : (
+				<button className="JobCard-Apply" onClick={handleApply}>
+					Apply
+				</button>
+			)}
 		</div>
 	);
 };
