@@ -28,13 +28,17 @@ const Jobs = () => {
 	return (
 		<div className="Jobs">
 			<Search handleSearch={handleSearch} />
-			<ul>
-				{jobs.map((job) => (
-					<li key={job.id}>
-						<JobCard job={job} />
-					</li>
-				))}
-			</ul>
+			{!jobs.length ? (
+				<p className="Jobs-Sorry">Sorry! No jobs match your search</p>
+			) : (
+				<ul>
+					{jobs.map((job) => (
+						<li key={job.id}>
+							<JobCard job={job} />
+						</li>
+					))}
+				</ul>
+			)}
 		</div>
 	);
 };
