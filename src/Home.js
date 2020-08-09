@@ -3,10 +3,6 @@ import { Link } from 'react-router-dom';
 import userContext from './Context';
 import './Home.css';
 
-// TODO
-// 2. Add tests for Login, Profile components
-// 3. Step 9 - add apply
-
 const Home = () => {
 	const { currentUser } = useContext(userContext);
 

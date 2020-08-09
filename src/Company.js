@@ -29,7 +29,7 @@ const Company = () => {
 			<p>{company.description}</p>
 			<ul>
 				{company.jobs.map((job) => (
-					<li key={job.handle}>
+					<li key={job.id}>
 						<Jobcard job={job} />
 					</li>
 				))}
