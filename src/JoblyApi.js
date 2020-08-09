@@ -11,11 +11,11 @@ class JoblyApi {
 		paramsOrData._token = localStorage.getItem('jobly-token') || null;
 
 		console.debug('API Call:', endpoint, paramsOrData, verb);
-
 		try {
 			return (await axios({
 				method                               : verb,
-				url                                  : `http://localhost:3001/${endpoint}`,
+				url                                  :
+					`https://serkules-jobly.herokuapp.com/${endpoint}` || `http://localhost:3001/${endpoint}`,
 				[verb === 'get' ? 'params' : 'data']: paramsOrData
 			})).data;
 			// axios sends query string data via the "params" key,
