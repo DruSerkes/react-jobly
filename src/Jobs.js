@@ -15,9 +15,9 @@ const Jobs = () => {
 		getJobs();
 	}, []);
 
-	const handleSearch = (values, { setSubmitting }) => {
-		if (!values.search) return null;
-		console.log(values);
+	const handleSearch = async (values, { setSubmitting }) => {
+		let jobs = await JoblyApi.getAllJobs(values);
+		setJobs([ ...jobs ]);
 		setSubmitting(false);
 	};
 

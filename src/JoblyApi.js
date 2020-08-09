@@ -38,20 +38,30 @@ class JoblyApi {
 		}
 	}
 
-	static async getAllCompanies() {
+	static async getAllCompanies(params = null) {
 		try {
-			let res = await this.request(`companies`);
-			return res.companies;
+			if (params) {
+				let res = await this.request(`companies`, params);
+				return res.companies;
+			} else {
+				let res = await this.request(`companies`);
+				return res.companies;
+			}
 		} catch (e) {
 			console.log(e);
 			return e;
 		}
 	}
 
-	static async getAllJobs() {
+	static async getAllJobs(params = null) {
 		try {
-			let res = await this.request('jobs');
-			return res.jobs;
+			if (params) {
+				let res = await this.request(`jobs`, params);
+				return res.jobs;
+			} else {
+				let res = await this.request('jobs');
+				return res.jobs;
+			}
 		} catch (e) {
 			console.log(e);
 			return e;
