@@ -31,3 +31,17 @@ a {
 	text-decoration: none;
 	color: blue;
 }
+
+.Navbar a.active {
+	color: darkblue;
+}
+
+.nav-logo,
+.nav-login,
+.nav-logout {
+	color: blue !important;
+}
+
+.nav-logo {
+	margin-left: 1rem;
+}

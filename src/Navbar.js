@@ -26,7 +26,7 @@ const Navbar = ({ currentUser, setCurrentUser }) => {
 
 	return (
 		<div className="Navbar">
-			<NavLink className="Navbar-Brand" to="/">
+			<NavLink className="Navbar-Brand" to="/" className="nav-logo">
 				Jobly
 			</NavLink>
 			<ul className="Navbar-Nav">
@@ -47,11 +47,13 @@ const Navbar = ({ currentUser, setCurrentUser }) => {
 				) : null}
 				<li>
 					{isLoggedIn ? (
-						<NavLink to="/" onClick={doLogout}>
+						<NavLink to="/" onClick={doLogout} className="nav-logout">
 							Logout
 						</NavLink>
 					) : (
-						<NavLink to="/login">Login</NavLink>
+						<NavLink to="/login" className="nav-login">
+							Login
+						</NavLink>
 					)}
 				</li>
 			</ul>
