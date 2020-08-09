@@ -17,8 +17,13 @@
 	margin: 0;
 }
 
-.active {
+.Login-Buttons .active {
 	background-color: rgb(11, 11, 161);
+}
+
+.error {
+	color: red;
+	margin-bottom: 1.2rem;
 }
 
 .LoginForm,

@@ -21,8 +21,8 @@ const LoginForm = ({ doLogin }) => {
 		<div className="LoginForm">
 			<Formik initialValues={INITIAL_VALUES} validationSchema={loginSchema} onSubmit={handleLogin}>
 				<Form>
-					<TextInput label="username" name="username" type="text" />
-					<TextInput label="password" name="password" type="password" />
+					<TextInput label="Username" name="username" type="text" />
+					<TextInput label="Password" name="password" type="password" />
 					<button>Submit</button>
 				</Form>
 			</Formik>
