@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import JoblyApi from './JoblyApi';
 import CompanyCard from './CompanyCard';
 import { Link } from 'react-router-dom';
+import Search from './Search';
 import './Companies.css';
 
 const Companies = () => {
@@ -15,12 +16,19 @@ const Companies = () => {
 		getCompanies();
 	}, []);
 
+	const handleSearch = async (values, { setSubmitting }) => {
+		let companies = await JoblyApi.getAllCompanies(values);
+		setCompanies([ ...companies ]);
+		setSubmitting(false);
+	};
+
 	if (!companies) {
 		return <h2>Loading Companies &hellip;</h2>;
 	}
 
 	return (
 		<div className="Companies">
+			<Search handleSearch={handleSearch} />
 			<ul>
 				{companies.map((company) => (
 					<li key={company.handle}>

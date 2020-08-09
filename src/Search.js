@@ -8,7 +8,7 @@ const Search = ({ handleSearch }) => {
 	};
 
 	return (
-		<Formik initialValues={INITIAL_VALUES} onSubmit={handleSearch}>
+		<Formik initialValues={INITIAL_VALUES} onSubmit={handleSearch} className="Search">
 			<Form>
 				<TextInput placeholder="Enter search term..." name="search" />
 				<button>Submit</button>
