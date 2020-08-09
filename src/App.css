@@ -31,6 +31,13 @@ button {
 	font-size: 1rem;
 	line-height: 1.5rem;
 	cursor: pointer;
+	background-color: royalblue;
+}
+
+input {
+	display: block;
+	margin: 0.5rem auto;
+	height: 1.6rem;
 }
 
 .App-header {
