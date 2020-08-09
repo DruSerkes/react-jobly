@@ -26,7 +26,7 @@ const Navbar = ({ currentUser, setCurrentUser }) => {
 
 	return (
 		<div className="Navbar">
-			<NavLink className="Navbar-Brand" to="/" className="nav-logo">
+			<NavLink className="Navbar-Brand" to="/">
 				Jobly
 			</NavLink>
 			<ul className="Navbar-Nav">

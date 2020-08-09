@@ -11,6 +11,7 @@
 }
 .Navbar-Brand {
 	margin: 0 1rem;
+	color: blue !important;
 }
 
 .Navbar-Nav {
@@ -36,12 +37,7 @@ a {
 	color: darkblue;
 }
 
-.nav-logo,
 .nav-login,
 .nav-logout {
 	color: blue !important;
-}
-
-.nav-logo {
-	margin-left: 1rem;
 }
