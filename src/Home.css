@@ -1,0 +1,31 @@
+.Home {
+	width: 100vw;
+	height: 90vh;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+
+.Home h1 {
+	font-size: 2.5rem;
+}
+
+.Home p {
+	font-size: 1.3rem;
+	font-weight: 300;
+}
+
+.Home h2 {
+	font-size: 2rem;
+	font-weight: 500;
+}
+
+.Home button {
+	background-color: royalblue;
+	margin: 1.8rem;
+}
+
+.Home button:hover {
+	background-color: rgb(51, 83, 179);
+}

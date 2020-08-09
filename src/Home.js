@@ -1,11 +1,12 @@
 import React, { useContext } from 'react';
 import { Link } from 'react-router-dom';
 import userContext from './Context';
+import './Home.css';
 
 // TODO
-// 1. Add tests for Home, Login, Profile components
-// 2. Add styles for Home, Login, Profile components
-// 3. Step 9 - add apply 
+// 1. Add styles for Login, Profile components
+// 2. Add tests for Home, Login, Profile components
+// 3. Step 9 - add apply
 
 const Home = () => {
 	const { currentUser } = useContext(userContext);
