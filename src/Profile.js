@@ -4,6 +4,7 @@ import TextInput from './forms/TextInput';
 import userContext from './Context';
 import JoblyApi from './JoblyApi';
 import profileSchema from './forms/profileSchema';
+import './Profile.css';
 
 const Profile = () => {
 	const { currentUser, setCurrentUser } = useContext(userContext);
