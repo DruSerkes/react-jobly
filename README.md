@@ -1,6 +1,6 @@
 # Jobly
 
-[Live App Demo](serkules-jobly.netlify.app)
+[Live App Demo](https://serkules-jobly.netlify.app)
 
 ## Getting started 
 1. clone this repo
